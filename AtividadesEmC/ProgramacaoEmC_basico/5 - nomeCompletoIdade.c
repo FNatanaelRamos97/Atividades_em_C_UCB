@@ -1,7 +1,7 @@
 /*
-5 – Escreva um programa que leia o nome completo (nome e sobrenome) e a idade de
-uma pessoa e depois imprima esses dados da seguinte forma (Olá <nome_completo>,
-seja bem-vindo ao curso de Algoritmos e Programação Estruturada. Você tem <idade>
+5 â€“ Escreva um programa que leia o nome completo (nome e sobrenome) e a idade de
+uma pessoa e depois imprima esses dados da seguinte forma (OlÃ¡ <nome_completo>,
+seja bem-vindo ao curso de Algoritmos e ProgramaÃ§Ã£o Estruturada. VocÃª tem <idade>
 anos de idade!).
 
  */
@@ -17,12 +17,12 @@ int main(){
 	printf("Digite seu nome completo: ");
 	fgets(nomeCompleto, sizeof(nomeCompleto), stdin); //To accept empty space
 
-//This function is to remove the character '\n'
+        nomeCompleto[strcspn(nomeCompleto, "\n")] = '\0'; //This function is to remove the character '\n'
 
 	printf("Digite sua idade: ");
 	scanf("%d",&idade);
 
-	printf("\nOl� %s!Seja bem-vindo ao curso de Algoritmos e Programacao Estruturada.\nVoce tem %d anos de idade",nomeCompleto,idade);
+	printf("\nOlá %s!Seja bem-vindo ao curso de Algoritmos e Programacao Estruturada.\nVoce tem %d anos de idade",nomeCompleto,idade);
 
 
 	return 0;
